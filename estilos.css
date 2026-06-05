@@ -648,6 +648,7 @@ form{
 #Aportar article div{
     justify-content: space-between;
     height: 55%;
+    gap: 0em;
 }
 
 #Aportar article img{
