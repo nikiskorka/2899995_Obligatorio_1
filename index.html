@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 6: Agua limpia y saneamiento</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <p class="numero">6</p>
+            <div>
+                <p class="nombre">Agua limpia</p>
+                <p class="nombre">y saneamiento</p>
+            </div>
+        </div>
+
+        <nav>
+            <div id="menú">
+                <a href="#Únete">Únete</a>
+                <a href="#grid">Desafíos</a>
+                <a href="#Aportar">Aportar</a>
+            </div>
+
+            <a href="" id="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </a>
+        </nav>
+    </header>
+
+    <div id="relative">
+        <section id="hero">
+            <h1>Agua limpia y saneamiento para todos</h1>
+            <p>Garantizar la disponibilidad de agua, su gestión sostenible y el saneamiento es esencial para la salud,
+                la eduación y el desarrollo.</p>
+            <a href="#grid" id="botonbajar">↓</a>
+        </section>
+
+        <form method="post" action="procesar.php" autocomplete="on">
+            <h2 id="Únete">Únete al cambio</h2>
+            <p>Recibí novedades y consejos para cuidar el agua</p>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <select id="pais" name="pais" required>
+                <option value="" selected disabled>Seleccioná tu país</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="argentina">Argentina</option>
+                <option value="brasil">Brasil</option>
+                <option value="chile">Chile</option>
+            </select>
+            <div class="opcion">
+                <input type="radio" id="recibirtodo" name="preferencia" value="todo" checked>
+                <label for="recibirtodo">Recibir todo</label>
+            </div>
+            <div class="opcion">
+
+                <input type="radio" id="solodestacados" name="preferencia" value="destacados">
+                <label for="solodestacados">Recibir solo destacados</label>
+            </div>
+            <input type="submit" value="Enviar">
+
+        </form>
+    </div>
+
+    <main>
+        <section id="grid">
+            <article>
+                <p class="decorativo">Vida</p>
+            </article>
+
+            <article>
+                <h2>Cada gota cuenta</h2>
+                <p>Usar el agua de forma responsable ayuda a reducir el estrés hídrico y proteger los ecosistemas.</p>
+                <a href="">Conocer más</a>
+                <img src="img/Gota.png" alt="Gota de agua">
+            </article>
+
+            <article>
+                <img src="img/Gota_cae.jpg" alt="Gota de agua cayendo en charco">
+            </article>
+
+            <article>
+                <h2>Agua segura para una vida digna</h2>
+                <p>El acceso al agua potable y al saneamiento permite prevenir enfermedades, mejorar la higiene diaria y
+                    garantizar condiciones básicas de salud y bienestar para todas las personas.</p>
+            </article>
+
+            <article>
+                <h2>El agua<br><span class="bold">no es</span><br>infinita</h2>
+            </article>
+
+            <article>
+                <p class="decorativo">Agua</p>
+            </article>
+        </section>
+
+        <section id="Aportar">
+            <h2>¿Cómo aportar?</h2>
+
+            <div id="gridflex">
+                <article>
+                    <p class="resalte">#1 eficiente</p>
+                    <img src="img/Canilla.jpg" alt="Canilla goteando a punto de ser cerrada">
+                    <div>
+                        <h3>Ahorrar agua en casa</h3>
+                        <p>Pequeños hábitos diarios, como cerrar la canilla o reparar pérdidas, ayudan a reducir el
+                            desperdicio.
+                        </p>
+                        <a href="">Ver más</a>
+                    </div>
+                </article>
+
+
+                <article>
+                    <p class="resalte">#2 eficiente</p>
+                    <img src="img/Rio_limpio_2.jpg" alt="Mano en río limpio">
+                    <div>
+                        <h3>Cuidar ríos y humedales</h3>
+                        <p>Los ecosistemas relacionados con el agua son esenciales para la biodiversidad y la vida
+                            humana.
+                        </p>
+                        <a href="">Ver más</a>
+                    </div>
+                </article>
+
+                <article>
+                    <p class="resalte">#3 eficiente</p>
+                    <img src="img/Lavar_manos_2.jpeg" alt="Primer plano de manos de niños siendo lavadas">
+                    <div>
+                        <h3>Mejorar la higiene diaria</h3>
+                        <p>Lavarse las manos con agua segura y jabón ayuda a prevenir enfermedades y proteger la salud
+                            de la
+                            comunidad.</p>
+                        <a href="">Ver más</a>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="img/Botella_de_agua.webp" alt="Botella reutilizable con agua">
+                    <div>
+                        <h3>Consumo consciente</h3>
+                        <p>Elegir productos, alimentos y hábitos que requieran menos agua contribuye a reducir la
+                            presión
+                            sobre
+                            este recurso.</p>
+                        <a href="">Ver más</a>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="img/Comunidad.jpg" alt="Comunidad plantando">
+                    <div>
+                        <h3>Participar en comunidad</h3>
+                        <p>Exigir inversión, apoyar campañas y compartir información fortalece la gestión sostenible
+                            del
+                            agua.
+                        </p>
+                        <a href="">Ver más</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h4>Redes sociales</h4>
+            <nav>
+                <a href=""><img src="img/Linkedin.png" alt="Logo Linkdein"></a>
+                <a href=""><img src="img/Twitter.png" alt="Logo Twitter"></a>
+                <a href=""><img src="img/Instagram.png" alt="Logo Instagram"></a>
+                <a href=""><img src="img/Whatsapp.png" alt="Logo Whatsapp"></a>
+            </nav>
+        </div>
+        <p>Textos adaptados de Naciones Unidas sobre el ODS 6. Imágenes de Pexels y búsqueda web, usadas con fines
+            educativos. Imágenes optimizadas.</p>
+    </footer>
+
+</body>
+
+</html>

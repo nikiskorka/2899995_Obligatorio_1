@@ -1,0 +1,660 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary: #073B4C;
+    --primary_low_opacity: #073b4cf5;
+    --secondary: #4CC9F0;
+    --secondary_low_opacity: #4ccaf0cb;
+    --tertiary: #96d5e8;
+    --background: #EEF8F7;
+    --background_low_opacity: #eef8f7ac;
+    --content: #1E2A2F;
+    --content_low_opacity: #1e2a2fb2;
+    --white: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+/* Tipografías */
+
+h1{
+    font-size: 2.2em;
+}
+
+h2{
+    font-size: 1.8em;
+}
+
+h3{
+    font-size: 1.3em;
+}
+
+h4{
+    font-size: 0.9em;
+}
+
+p{
+    font-size: 1em;
+}
+
+/* Header y navegación */
+
+header{
+    background-color: var(--primary_low_opacity);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.2em var(--secondary) solid;
+    z-index: 10;
+}
+
+header #logo{
+    height: fit-content;
+    text-transform: uppercase;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+header #logo .numero{
+    font-size: 3.3em;
+    font-weight: 900;
+}
+
+header #logo .nombre{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+nav{
+    display: flex;
+    gap: 0.8em;
+}
+
+nav #hamburguesa div{
+    width: 1.4em;
+    height: 0.5em;
+    border-bottom: 0.15em var(--secondary) solid;
+}
+
+nav #menú{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+nav #menú a{
+    font-size: 1em;
+    color: var(--background);
+    text-align: right;
+}
+
+nav:hover #menú{
+    opacity: 1;
+}
+
+/* Hero */
+
+#hero{
+    height: fit-content;
+    padding: 10em 1.3em 1.3em 1.3em;
+    background-image: url(img/Fondo.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    color: var(--primary);
+}
+
+#hero h1,
+#hero p{
+    max-width: 65%;
+}
+
+#hero #botonbajar{
+    font-size: 1.8em;
+    width: fit-content;
+    padding: 0.4em;
+    border-radius: 100%;
+    transition: 0.3s;
+    color: var(--primary);
+    background-color: var(--primary_low_opacity);
+    color: var(--background);
+}
+
+#hero #botonbajar:hover{
+    background-color: var(--background_low_opacity);
+    color: var(--primary);
+}
+
+/* Formulario */
+
+form{
+    background-color: var(--primary);
+    padding: 1.5em;
+    margin: 1.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1.5em var(--content);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    color: var(--background);
+}
+
+form input,
+form select{
+    padding: 0.7em;
+    height: 3em;
+    border: none;
+    border-radius: 0.3em;
+    font-size: 0.9em;
+}
+
+form input[type="radio"]{
+    width: auto;
+    height: auto;
+    accent-color: var(--secondary);
+}
+
+form input::placeholder{
+    color: var(--content);
+}
+
+.opcion{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+/* Grid principal + botón */
+
+#grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 40vh);
+    margin-bottom: 2em;
+}
+
+#grid article{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+#grid article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#grid article:nth-of-type(1){
+    background-image: url(img/Agua2.jpeg);
+    background-attachment: fixed;
+}
+
+#grid article:nth-of-type(1) .decorativo,
+#grid article:nth-of-type(6) .decorativo{
+    color: black;
+    padding: 1.3em;
+    font-size: 10em;
+    font-weight: 900;
+    background-color: var(--tertiary);
+    mix-blend-mode: screen;
+}
+
+#grid article:nth-of-type(2){
+    background-color: var(--primary);
+}
+
+#grid article:nth-of-type(2) h2,
+#grid article:nth-of-type(2) a,
+#grid article:nth-of-type(2) p{
+    z-index: 2;
+    max-width: 60%;
+    color: var(--background);
+}
+
+#grid article:nth-of-type(2) img{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateZ(-15deg);
+}
+
+#grid article:nth-of-type(2) a,
+#Aportar article a,
+form input[type="submit"]{
+    width: fit-content;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    background-color: var(--background_low_opacity);
+    color: var(--content);
+    transition: 0.3s;
+}
+
+#grid article:nth-of-type(2) a:hover,
+#Aportar article a:hover,
+form input[type="submit"]:hover{
+    padding: 0.8em;
+    border-radius: 0.5em;
+    background-color: var(--secondary_low_opacity);
+}
+
+#grid article:nth-of-type(4){
+    display: none;
+}
+
+#grid article:nth-of-type(5){
+    background-image: url(img/Agua.jpg), radial-gradient(circle at 30% 25%, #ffffff 0%, #eef8f7 28%, #b9f1ff 55%, #4cc9f0 78%, #073b4c 100%);
+    background-blend-mode: multiply;
+}
+
+#grid article:nth-of-type(5) h2{
+    text-transform: uppercase;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    font-weight: 400;
+}
+
+#grid article:nth-of-type(6){
+    background-image: url(img/Botellas_de_agua_2.jpg);
+    background-attachment: fixed;
+}
+
+#grid article:nth-of-type(1),
+#grid article:nth-of-type(5),
+#grid article:nth-of-type(6) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+/* Sección grid/flex */
+
+#Aportar h2{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#Aportar article{
+    margin: 1.5em;
+    height: fit-content;
+    border-radius: 1em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    background-color: var(--primary);
+    color: var(--background);
+    border: 0.2em var(--secondary) solid;
+}
+
+#Aportar article div{
+    padding: 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#Aportar article h3{
+    color: var(--secondary);
+}
+
+#Aportar article img{
+    width: 100%;
+    height: 22vh;
+    object-fit: cover;
+    display: block;
+}
+
+#Aportar article:nth-of-type(n+4) img{
+    display: none;
+}
+
+#Aportar article:nth-of-type(-n+3) p.resalte{
+    padding: 0.8em;
+    position: absolute;
+    right: 0;
+    top: -0.3em;
+    z-index: 5;
+    font-weight: 700;
+}
+
+#Aportar article:nth-of-type(1) p.resalte{
+    background-color: var(--primary);
+}
+
+#Aportar article:nth-of-type(2) p.resalte{
+    background-color: var(--secondary);
+}
+
+#Aportar article:nth-of-type(3) p.resalte{
+    background-color: var(--content);
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    padding: 1em 4em;
+    background-color: var(--primary);
+    height: fit-content;
+    color: var(--background);
+}
+
+footer nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+footer nav a{
+    width: 2em;
+    height: 2em;
+}
+
+footer nav a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer p{
+    font-size: 0.6em;
+    color: var(--background);
+    margin-top: 4em;
+}
+
+/* TABLET */
+
+@media all and (min-width:768px){
+
+/* Tipografías */
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+h4{
+    font-size: 1em;
+}
+
+p{
+    font-size: 1em;
+}
+
+/* Header y navegación */
+
+nav #menú{
+    flex-direction: row;
+    gap: 1.2em;
+}
+
+nav #menú a{
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* Hero */
+
+#hero{
+    gap: 2em;
+}
+
+/* Grid principal + botón */
+
+#grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 40vh);
+}
+
+#grid article:nth-of-type(2){
+    grid-row: span 2;
+    gap: 6em;
+}
+
+#grid article:nth-of-type(2) h2,
+#grid article:nth-of-type(2) p,
+#grid article:nth-of-type(2) a{
+    transform: translateY(8%);
+}
+
+#grid article:nth-of-type(2) img{
+    width: 90%;
+    left: -20%;
+    top: 6%;
+}
+
+#grid article:nth-of-type(4){
+    display: flex;
+    grid-column: span 2;
+    background-image: url(img/Rio_limpio.jpg), linear-gradient(to right,rgba(255, 255, 255, 0.95) 0%, rgba(238, 248, 247, 0.85) 35%,rgba(76, 201, 240, 0.55) 70%,rgba(7, 59, 76, 0.85) 100%);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#grid article:nth-of-type(4) h2,
+#grid article:nth-of-type(4) p{
+    max-width: 35%;
+    text-align: left;
+    transform: translateX(-85%);
+}
+
+/* Sección grid/flex */
+
+#gridflex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    margin: 1.5em;
+}
+
+#gridflex article:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+#gridflex article:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 1/3;
+}
+
+#gridflex article:nth-of-type(3){
+    grid-column: 1;
+    grid-row: 3/5;
+}
+
+#gridflex article:nth-of-type(4){
+    grid-column: 2;
+    grid-row: 3/4;
+}
+
+#gridflex article:nth-of-type(5){
+    grid-column: 2;
+    grid-row: 4/5;
+}
+
+#Aportar article{
+    margin: 0.5em;
+    height: auto;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+    max-width: 30%;
+    text-align: left;
+}
+
+footer div{
+    padding: 1em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: right;
+}
+
+footer nav{
+    margin-top: 0em;
+}
+
+}
+
+/* DESKTOP */
+
+@media all and (min-width:1200px){
+
+/* Tipografías */
+
+h1{
+    font-size: 3.6em;
+}
+
+h2{
+    font-size: 2.6em;
+}
+
+h3{
+    font-size: 1.7em;
+}
+
+h4{
+    font-size: 1.1em;
+}
+
+p{
+    font-size: 1.1em;
+}
+
+/* Hero */
+
+#hero{
+    gap: 4em;
+    margin-bottom: 3em;
+}
+
+#hero h1, #hero p{
+    max-width: 50%;
+}
+
+.relative{
+    position: relative;
+}
+
+/* Formulario */
+
+form{
+    width: 30%;
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    z-index: 2;
+}
+
+/* Grid principal + botón */
+
+#grid{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 40vh);
+}
+
+#grid article:nth-of-type(3){
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#grid article:nth-of-type(4){
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+
+/* Sección grid/flex */
+
+#gridflex{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+#Aportar article{
+    margin: 0.5em;
+    width: 30%;
+    height: auto;
+}
+
+#Aportar article img{
+    filter: blur(10px);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+#Aportar article:hover img{
+    filter: blur(0px);
+}
+
+#Aportar article:nth-of-type(n+4) img{
+    display: block;
+}
+}
