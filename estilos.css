@@ -642,6 +642,12 @@ form{
     margin: 0.5em;
     width: 30%;
     height: 28em;
+    justify-content: space-between;
+}
+
+#Aportar article div{
+    justify-content: space-between;
+    height: 55%;
 }
 
 #Aportar article img{
